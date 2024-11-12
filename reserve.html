@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Reservation</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('the office 2.jpg');
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+
+.container {
+    margin-top: 120px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    width: 400px;
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 2em;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1em;
+    margin: 10px 0 5px;
+    text-align: left;
+    color: #d4af37;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #d4af37;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #fff;
+    background: transparent;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #fff;
+}
+
+button {
+    background-color: #d4af37;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+button:focus {
+    outline: none;
+}
+
+option {
+    color: #000;
+}
+
+    </style>
+</head>
+<body>
+    <div class="background">
+    <div class="container">
+        <img src="daa3cd7b8de30292ce0b1ee393bfcefa.png" class="logo">
+        <h1>Reserve a Car</h1>
+        <form id="reservation-form" method="POST" action="/reserve">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="car-model">Car Model:</label>
+            <select id="car-model" name="car_model" required>
+                <option value="Sedan">Mercedes Maybach S680</option>
+                <option value="SUV">S Class</option>
+                <option value="Truck">AMG 63S</option>
+            </select>
+
+            <label for="pickup-date">Pick-up Date:</label>
+            <input type="date" id="pickup-date" name="pickup_date" required>
+
+            <label for="dropoff-date">Drop-off Date:</label>
+            <input type="date" id="dropoff-date" name="dropoff_date" required>
+
+            <button type="submit">Reserve Now</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
